@@ -14,7 +14,7 @@ printf "${YELLOW}   CloudoArc CDN Configuration Starting...  ${NC}\n"
 printf "${BLUE}==========================================${NC}\n"
 
 # 1. SETUP VARIABLES
-export BUCKET_NAME=qwiklabs-gcp-03-851607e217f9-bucket
+export BUCKET_NAME=YOUR_BUCKET_NAME
 export BACKEND_BUCKET=static-backend-bucket
 export URL_MAP=cdn-map
 export PROXY=cdn-http-proxy
