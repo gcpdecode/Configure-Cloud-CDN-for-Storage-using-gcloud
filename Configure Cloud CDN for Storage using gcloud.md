@@ -1,5 +1,6 @@
 ```
 
+
 # --- COLOR DEFINITIONS ---
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -13,7 +14,7 @@ printf "${YELLOW}   CloudoArc CDN Configuration Starting...  ${NC}\n"
 printf "${BLUE}==========================================${NC}\n"
 
 # 1. SETUP VARIABLES
-export BUCKET_NAME=YOUR_BUCKET_NAME
+export BUCKET_NAME=qwiklabs-gcp-03-851607e217f9-bucket
 export BACKEND_BUCKET=static-backend-bucket
 export URL_MAP=cdn-map
 export PROXY=cdn-http-proxy
@@ -46,10 +47,12 @@ printf "${GREEN}SUCCESS!${NC} Your Load Balancer IP is: ${YELLOW}$IP_ADDRESS${NC
 
 ----------------------------------------------
 
-gsutil ls gs:/YOUR_BUCKET_NAME/images/
+gsutil ls gs://YOUR_BUCKET_NAME/images/
 
 ----------------------------------------------
-curl -o nature.png http://IP_ADDRESS/images/nature.png
+curl -o nature.png http://YOUR_IP_ADDRESS/images/nature.png
+
+
 
 
 ```
