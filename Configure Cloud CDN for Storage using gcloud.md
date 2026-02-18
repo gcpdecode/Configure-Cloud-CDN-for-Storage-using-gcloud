@@ -43,15 +43,12 @@ printf " ${GREEN}DONE!${NC}\n"
 printf "\n${BLUE}------------------------------------------${NC}\n"
 export IP_ADDRESS=$(gcloud compute forwarding-rules describe $FORWARDING_RULE --global --format="value(IPAddress)")
 printf "${GREEN}SUCCESS!${NC} Your Load Balancer IP is: ${YELLOW}$IP_ADDRESS${NC}\n"
-printf "${BLUE}------------------------------------------${NC}\n"
 
+----------------------------------------------
 
----------------------------------------------------------------------------------------------------------------------
-# 7. FINAL TEST
-printf "${YELLOW}Waiting 20 seconds for DNS to wake up...${NC}\n"
-sleep 20
-printf "${YELLOW}Testing file access:${NC}\n"
 gsutil ls gs:/YOUR_BUCKET_NAME/images/
+
+----------------------------------------------
 curl -o nature.png http://IP_ADDRESS/images/nature.png
 
 
